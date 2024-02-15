@@ -13,11 +13,6 @@ export default function Search() {
     setSelectedCategory("Search");
     setSearchTerm(term);
   }, 500);
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
-  //   setSelectedCategory("Search");
-  //   setSearchTerm(searchText);
-  // };
 
   const handleTyping = (e) => {
     setSearchText(e.target.value);

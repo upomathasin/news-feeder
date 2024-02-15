@@ -10,7 +10,11 @@ export default function useNewsQuery() {
     let url = `http://localhost:8000/v2/top-headlines`;
 
     console.log(selectedCategory);
-    if (selectedCategory == "Search") {
+    if (
+      selectedCategory == "Search" &&
+      selectedCategory.length > 0 &&
+      searchTerm.trim().length > 0
+    ) {
       url = `http://localhost:8000/v2/search?q=${searchTerm}`;
     } else if (
       selectedCategory &&
@@ -24,7 +28,7 @@ export default function useNewsQuery() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        if (selectedCategory == "Search") {
+        if (selectedCategory == "Search" && searchTerm.trim().length > 0) {
           setNews(data.result);
         } else {
           setNews(data.articles);
