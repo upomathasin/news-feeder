@@ -3,6 +3,7 @@ import CardOne from "./CardOne";
 import CardTwo from "./CardTwo";
 
 export default function RightNewsPart({ data }) {
+  //  console.log("rightNew: ", data);
   return (
     <div className="col-span-12 self-start xl:col-span-4">
       <div className="space-y-6 divide-y-2 divide-[#D5D1C9]">

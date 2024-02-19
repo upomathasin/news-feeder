@@ -14,7 +14,7 @@ export default function News() {
       RightPart.push(n);
     }
 
-    // console.log("left : ", LeftPart);
+    //  console.log("left : ", LeftPart, "Right : ", RightPart);
   });
   return (
     <main className="my-10 lg:my-14">
